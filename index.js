@@ -1,6 +1,6 @@
 const path = require('path')
 
-const ENVS = path.join(process.cwd(), 'envvars')
+const ENVS = path.join(__dirname, 'envvars')
 
 console.log(ENVS);
 
