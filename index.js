@@ -1,8 +1,13 @@
 const path = require('path')
-require('dotenv').config({path: path.join(process.cwd(), 'envvars')})
+
+const ENVS = path.join(process.cwd(), 'envvars')
+
+console.log(ENVS);
+
+require('dotenv').config({path: ENVS})
 const Chewb = require('@samelie/chewb')
 const ChewbPassport = require('@samelie/chewb-passport')
-let server = new Chewb(path.join(process.cwd(), 'envvars'))
+let server = new Chewb(ENVS)
 
 let strats = [{
   name: 'facebook',
