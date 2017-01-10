@@ -1,20 +1,21 @@
 const path = require('path')
+require('dotenv').config({path: path.join(__dirname, 'envvars')})
 const Chewb = require('@samelie/chewb')
 const ChewbPassport = require('@samelie/chewb-passport')
 let server = new Chewb(path.join(__dirname, 'envvars'))
 
 let strats = [{
   name: 'facebook',
-  clientId: '1656736837874441',
-  clientSecret: 'f9da079389ba1b0aef80dc978c632958',
+  clientId: process.env.FACEBOOK_ID,
+  clientSecret: process.env.FACEBOOK_SECRET,
   authUrl: '/login/facebook',
   redirectUrl: '/login/facebook/return',
   callbackUrl: 'http://localhost:8081/login/facebook/success'
 }, {
   name: 'instagram',
   scope: ['public_content'],
-  clientId: 'c82f60355b9d42869a65bad4e0753fdc',
-  clientSecret: '7ac9fac8b09b4634af1720e05d376a75',
+  clientId: process.env.INSRAGRAM_ID,
+  clientSecret: process.env.FACEBOOK_SECRET,
   authUrl: '/login/instagram',
   redirectUrl: '/login/instagram/return',
   callbackUrl: 'http://localhost:8081/login/instagram/success'
@@ -24,8 +25,8 @@ let strats = [{
     'https://www.googleapis.com/auth/youtube.readonly',
     'https://www.googleapis.com/auth/youtube.force-ssl'
   ],
-  clientId: '390854965946-u8n4jeabn19qk9dvn6ofpdkfdvmrid2c.apps.googleusercontent.com',
-  clientSecret: '4WmOui4rln4K8hQssMdjki52',
+  clientId: process.env.YOUTUBE_ID,
+  clientSecret: process.env.YOUTUBE_SECRET,
   authUrl: '/login/youtube',
   redirectUrl: '/login/youtube/return',
   callbackUrl: 'http://localhost:8081/login/youtube/success'
