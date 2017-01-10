@@ -10,7 +10,7 @@ let strats = [{
   clientSecret: process.env.FACEBOOK_SECRET,
   authUrl: '/login/facebook',
   redirectUrl: '/login/facebook/return',
-  callbackUrl: 'http://localhost:8081/login/facebook/success'
+  callbackUrl: `http://localhost:${process.env.EXPRESS_PORT}/login/facebook/success`
 }, {
   name: 'instagram',
   scope: ['public_content'],
@@ -18,7 +18,7 @@ let strats = [{
   clientSecret: process.env.FACEBOOK_SECRET,
   authUrl: '/login/instagram',
   redirectUrl: '/login/instagram/return',
-  callbackUrl: 'http://localhost:8081/login/instagram/success'
+  callbackUrl: `http://localhost:${process.env.EXPRESS_PORT}/login/instagram/success`
 }, {
   name: 'youtube',
   scope: [
@@ -29,7 +29,7 @@ let strats = [{
   clientSecret: process.env.YOUTUBE_SECRET,
   authUrl: '/login/youtube',
   redirectUrl: '/login/youtube/return',
-  callbackUrl: 'http://localhost:8081/login/youtube/success'
+  callbackUrl: `http://localhost:${process.env.EXPRESS_PORT}/login/youtube/success`
 }]
 
 let chewbPassport = new ChewbPassport(
