@@ -19,8 +19,8 @@ let strats = [{
 }, {
   name: 'instagram',
   scope: ['public_content'],
-  clientId: process.env.INSRAGRAM_ID,
-  clientSecret: process.env.FACEBOOK_SECRET,
+  clientId: process.env.INSTAGRAM_ID,
+  clientSecret: process.env.INSTAGRAM_SECRET,
   authUrl: '/login/instagram',
   redirectUrl: '/login/instagram/return',
   callbackUrl: `http://localhost:${process.env.EXPRESS_PORT}/login/instagram/success`
