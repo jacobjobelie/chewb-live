@@ -4,7 +4,7 @@
   "main": "main.js",
   "private": true,
   "dependencies": {
-    "chewb-serer": "*",
+    "chewb-server": "*",
     "chewb-passport": "*",
     "dotenv": "^4.0.0"
   },
