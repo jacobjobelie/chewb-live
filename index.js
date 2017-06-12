@@ -5,8 +5,8 @@ const ENVS = path.join(__dirname, 'envvars')
 console.log(ENVS);
 
 require('dotenv').config({path: ENVS})
-const Chewb = require('@samelie/chewb')
-const ChewbPassport = require('@samelie/chewb-passport')
+const Chewb = require('chewb-server')
+const ChewbPassport = require('chewb-passport')
 let server = new Chewb(ENVS)
 
 let strats = [{

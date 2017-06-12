@@ -1,11 +1,11 @@
 {
-  "name": "deux-chewb",
+  "name": "chewb-server",
   "version": "1.0.0",
   "main": "main.js",
   "private": true,
   "dependencies": {
-    "@samelie/chewb": "git://github.com/samradical/chewb.git",
-    "@samelie/chewb-passport": "git://github.com/samradical/chewb-passport.git",
+    "chewb": "*",
+    "chewb-passport": "*",
     "dotenv": "^4.0.0"
   },
   "scripts": {}
