@@ -1,10 +1,10 @@
 const path = require('path')
 
+
 const ENVS = path.join(__dirname, 'envvars')
 
-console.log(ENVS);
+require('dotenv').config({ path: ENVS })
 
-require('dotenv').config({path: ENVS})
 const Chewb = require('chewb-server')
 const ChewbPassport = require('chewb-passport')
 let server = new Chewb(ENVS)
@@ -27,6 +27,9 @@ let strats = [{
 }, {
   name: 'youtube',
   scope: [
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube",
+    "https://www.googleapis.com/auth/youtubepartner",
     'https://www.googleapis.com/auth/youtube.readonly',
     'https://www.googleapis.com/auth/youtube.force-ssl'
   ],
@@ -44,11 +47,3 @@ let chewbPassport = new ChewbPassport(
     baseRoute: '',
     logOut: true
   })
-
-
-
-/*const Server = function(){
-  return server
-}
-
-module.exports = Server*/

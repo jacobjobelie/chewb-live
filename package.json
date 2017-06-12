@@ -1,12 +1,13 @@
 {
-  "name": "chewb-server",
+  "name": "chewb-live",
   "version": "1.0.0",
   "main": "main.js",
   "private": true,
   "dependencies": {
-    "chewb-server": "*",
-    "chewb-passport": "*",
+    "chewb-passport": "0.0.1",
+    "chewb-server": "0.0.12",
     "dotenv": "^4.0.0"
   },
-  "scripts": {}
+  "scripts": {},
+  "false": {}
 }
