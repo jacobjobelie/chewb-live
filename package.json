@@ -4,9 +4,10 @@
   "main": "main.js",
   "private": true,
   "dependencies": {
-    "chewb-passport": "0.0.1",
-    "chewb-server": "0.0.12",
-    "dotenv": "^4.0.0"
+    "chewb-passport": "*",
+    "chewb-server": "*",
+    "dotenv": "^4.0.0",
+    "ip": "^1.1.5"
   },
   "scripts": {},
   "false": {}
