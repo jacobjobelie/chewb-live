@@ -9,6 +9,8 @@ const Chewb = require('chewb-server')
 const ChewbPassport = require('chewb-passport')
 let server = new Chewb(ENVS)
 
+const Peer = require('./peer')
+
 let strats = [{
   name: 'facebook',
   clientId: process.env.FACEBOOK_ID,
@@ -47,3 +49,5 @@ let chewbPassport = new ChewbPassport(
     baseRoute: '',
     logOut: true
   })
+
+const peer = Peer(server.app, server.server, server.io)
